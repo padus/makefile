@@ -1,4 +1,4 @@
-# C/C++ makefile
+# C/C++ Makefile
 
 A fast and efficient way to build small to medium C/C++ projects
 
