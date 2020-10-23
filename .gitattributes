@@ -1,0 +1,9 @@
+#
+# Author:      Mirco Caramori
+# Copyright:   (c) 2020 Mirco Caramori
+# Repository:  https://github.com/mircolino/makefile
+#
+# Description: repository git attributes
+#
+
+* text=auto encoding=UTF-8
