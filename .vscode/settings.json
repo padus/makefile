@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "makefile.gcc": "makefile",
+    "makefile.cl": "makefile"
+  }
+}

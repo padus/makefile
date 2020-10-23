@@ -6,10 +6,10 @@ A fast and efficient way to build small to medium C/C++ projects
 
 - Target both Windows 10 and Linux with one makefile
 - Support for both GNU gcc and Microsoft cl
+- Automatic source folder recursion
 - Easily switch between debug and release builds
 - Precompiled headers
-- Source folder recursion
-- No external dependecies 
+- No external dependecies
 
 ## Disclaimer
 
