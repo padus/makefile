@@ -102,6 +102,11 @@ REL_LST := $(sort $(REL_DIR) $(patsubst $(SRC_DIR)%,$(REL_DIR)%,$(DIR_LST)))
 DBG_LST := $(sort $(DBG_DIR) $(patsubst $(SRC_DIR)%,$(DBG_DIR)%,$(DIR_LST)))
 
 ifeq ($(CC),msvc)
+  #
+  # cl options:   https://docs.microsoft.com/en-us/cpp/build/reference/compiler-options-listed-by-category
+  #               https://docs.microsoft.com/en-us/cpp/build/reference/compiler-options-listed-alphabetically
+  # link options: https://docs.microsoft.com/en-us/cpp/build/reference/linking
+  #
   #-----------------------------------------------------------------------------------------------------------------------------
   REL_CFL := -std:c++17 -EHsc -nologo -O2 -I$(SRC_DIR) -DNDEBUG
   REL_LFL := -nologo
@@ -120,6 +125,9 @@ ifeq ($(CC),msvc)
   DBG_CMP  = cl $(DBG_CFL) -Yu$(PRECOMP)$(HDR_EXT) -Fd$(DBG_DIR)/ -Fp$(DBG_DIR)/$(PRECOMP)$(PCH_EXT) -Fo$@ -c $<
   DBG_LNK  = link $(DBG_LFL) -out:$@ $^ $(DBG_DIR)/$(PRECOMP)$(OBJ_EXT)
 else
+  #
+  # gcc/g++ options: https://gcc.gnu.org/onlinedocs/gcc/Invoking-GCC.html
+  #
   #-----------------------------------------------------------------------------------------------------------------------------
   REL_CFL := -std=c++17 -O3 -I$(SRC_DIR) -DNDEBUG
   REL_LFL :=
