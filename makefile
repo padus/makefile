@@ -108,10 +108,10 @@ ifeq ($(CC),msvc)
   # link options: https://docs.microsoft.com/en-us/cpp/build/reference/linking
   #
   #-----------------------------------------------------------------------------------------------------------------------------
-  REL_CFL := -std:c++17 -EHsc -nologo -O2 -I$(SRC_DIR) -DNDEBUG
+  REL_CFL := -std:c++17 -TP -EHsc -nologo -O2 -I$(SRC_DIR) -DNDEBUG
   REL_LFL := -nologo
 
-  DBG_CFL := -std:c++17 -EHsc -nologo -Zi -Wall -I$(DBG_DIR) -I$(SRC_DIR) 
+  DBG_CFL := -std:c++17 -TP -EHsc -nologo -Zi -Wall -I$(DBG_DIR) -I$(SRC_DIR) 
   DBG_LFL := -nologo -debug
   #-----------------------------------------------------------------------------------------------------------------------------
 
