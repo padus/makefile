@@ -105,7 +105,7 @@ ifeq ($(CC),msvc)
   #
   # cl options:   https://docs.microsoft.com/en-us/cpp/build/reference/compiler-options-listed-by-category
   #               https://docs.microsoft.com/en-us/cpp/build/reference/compiler-options-listed-alphabetically
-  # link options: https://docs.microsoft.com/en-us/cpp/build/reference/linking
+  # link options: https://docs.microsoft.com/en-us/cpp/build/reference/linker-options
   #
   #-----------------------------------------------------------------------------------------------------------------------------
   REL_CFL := -std:c++17 -TP -EHsc -nologo -O2 -I$(SRC_DIR) -DNDEBUG
